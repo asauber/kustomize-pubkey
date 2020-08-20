@@ -1,0 +1,6 @@
+apiVersion: asauber.wordonthestack.com/v1
+kind: PubkeyFromGithub
+metadata:
+  name: pubkeyplugin
+name: pubkeyplugin
+githubUsername: asauber

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+username=$(cat "$1" | ggrep -oP 'githubUsername: \K\w+')
+keys=$(curl "https://github.com/${username}.keys" 2>/dev/null | base64)
+
+echo "
+apiVersion: v1
+kind: Secret
+metadata:
+  name: "${username}-pubkeys"
+  namespace: kube-system
+type: Opaque
+data:
+  pubkeys: "$keys"
+"
