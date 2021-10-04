@@ -40,3 +40,9 @@ metadata:
   namespace: kube-system
 type: Opaque
 ```
+
+Note that you can have kustomize yield a plain manifest this way:
+
+```
+$ ./kustomize.sh >secret.yaml
+```
