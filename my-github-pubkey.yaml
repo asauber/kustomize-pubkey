@@ -1,6 +1,5 @@
-apiVersion: asauber.wordonthestack.com/v1
+apiVersion: PubkeyGenerators
 kind: PubkeyFromGithub
 metadata:
-  name: pubkeyplugin
-name: pubkeyplugin
+  name: asauber-pubkey
 githubUsername: asauber

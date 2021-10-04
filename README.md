@@ -5,7 +5,7 @@ Generates a kubernetes secret containing all of your GitHub public keys.
 ## Setup
 
 ```
-brew install kustomize coreutils
+make setup
 ```
 
 ## Usage
@@ -16,8 +16,10 @@ Edit `my-github-pubkey.yaml` to use your GitHub username.
 githubUsername: <your username>
 ```
 
-Run kustomize with the plugin directory specified
+Run kustomize
 
 ```
-./kustomize.sh
+make kustomize
 ```
+
+Refer to `kustomize.sh` for the required flags and environment variables.
