@@ -1,2 +1,2 @@
 generators:
-  - pubkey-from-github.yaml
+  - my-github-pubkey.yaml

@@ -1,6 +1,14 @@
 #!/bin/bash
 
+# Inputs:
+# githubUsername: <a github username>
+#
+# Outputs:
+# A kubernetes Secret in the kube-system namespace containing
+# the supplied user's public keys
+
 username=$(cat "$1" | ggrep -oP 'githubUsername: \K\w+')
+
 keys=$(curl "https://github.com/${username}.keys" 2>/dev/null | base64)
 
 echo "
